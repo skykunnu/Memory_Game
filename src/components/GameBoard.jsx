@@ -118,10 +118,10 @@ const GameBoard = () => {
   }, [matchedCards, gameCards]);
 
   return (
-    <div className="min-h-screen bg-body-bg flex flex-col items-center justify-center">
-      <div className="text-center mb-4">
-        <h1 className="text-3xl font-bold">How Good's Your Memory?</h1>
-        <h4 className="text-xl">
+    <div className="min-h-screen bg-body-bg flex flex-col items-center justify-center py-2">
+      <div className="text-center mb-2 md:mb-2 py-1">
+        <h1 className="md:text-3xl text-4xl font-bold">How Good's Your Memory?</h1>
+        <h4 className="md:text-xl text-lg">
           Find all pairs in least time & with minimum clicks
         </h4>
       </div>
@@ -129,10 +129,10 @@ const GameBoard = () => {
       {!gameStarted && !isGameOver && (
         <button
           onClick={startGame}
-          className="bg-start-btn text-black px-8 py-4 rounded-2xl 
+          className="bg-start-btn text-black px-6 py-3 md:px-8 md:py-4 rounded-2xl 
           font-bold border-2 border-black transition-all 
           hover:shadow-none hover:translate-y-1
-          shadow-start-btn"
+          shadow-start-btn text-sm md:text-base"
         >
           Let's Find Out
         </button>
@@ -140,7 +140,7 @@ const GameBoard = () => {
 
       {(gameStarted || isGameOver) && (
         <div
-          className="bg-game-bg w-[50rem] mx-auto px-10 py-2 
+          className="bg-game-bg w-[60%] max-w-4xl mx-auto px-4 md:px-10 py-2 
           rounded-lg shadow-lg relative flex flex-col items-center"
         >
           <GameStats
@@ -162,15 +162,17 @@ const GameBoard = () => {
               </button>
             </div>
           ) : (
-            <div className="game-board flex flex-wrap justify-evenly w-full">
+            <div className="game-board flex flex-wrap justify-start w-full sm:gap-1 md:gap-1 gap-[0.1rem]">
               {gameCards.map((card) => (
-                <FlipCard
-                  key={card.id}
-                  image={card.image}
-                  isFlipped={card.isFlipped}
-                  isMatched={matchedCards.includes(card.id)}
-                  onClick={() => handleCardClick(card.id)}
-                />
+                <div key={card.id}  className='w-1/4 sm:w-1/4 md:w-1/4 lg:w-1/5 p-1'>
+                  <FlipCard
+                    image={card.image}
+                    isFlipped={card.isFlipped}
+                    isMatched={matchedCards.includes(card.id)}
+                    onClick={() => handleCardClick(card.id)}
+                  />
+                </div>
+
               ))}
             </div>
           )}

@@ -2,7 +2,7 @@
 const FlipCard = ({ image, isFlipped, isMatched, onClick }) => {
   return (
     <div
-      className={`flip-card bg-transparent w-[22%] h-[150px] my-2 perspective-1000 cursor-pointer ${
+      className={`flip-card bg-transparent w-full h-full aspect-square perspective-1000 cursor-pointer ${
         isMatched ? "pointer-events-none" : ""
       }`}
       onClick={onClick}
@@ -12,14 +12,14 @@ const FlipCard = ({ image, isFlipped, isMatched, onClick }) => {
           ${isFlipped ? "rotate-y-180" : ""}`}
       >
         <div
-          className={`flip-card-front absolute w-full h-full bg-card-front ${
+          className={`flip-card-front absolute w-full h-full bg-card-front rounded-md ${
             isFlipped ? "rotate-y-180 hidden" : "rotate-y-0"
           }`}
         >
           <img
             src="/images/questionMark.jpg"
             alt="Question Mark"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-md"
           />
         </div>
         <div
