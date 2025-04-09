@@ -1,8 +1,25 @@
-# React + Vite
+# 🧠 Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive Memory Matching Game built with React.js and Tailwind CSS. Flip the cards and test your memory by matching pairs!
 
-Currently, two official plugins are available:
+# 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Interactive card-flipping animation
+
+* Match two identical cards to score
+
+* Move the counter to track your progress
+
+* Reset and play again functionality
+
+* Fully responsive design
+
+* Built with React and styled using Tailwind CSS
+
+# 🛠 Tech Stack
+
+* React.js – UI library
+
+* Tailwind CSS – Utility-first CSS framework
+
+* Vite – Build tool
