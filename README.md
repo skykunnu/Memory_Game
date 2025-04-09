@@ -25,3 +25,13 @@ Live-Demo - https://memory-game-psi-olive.vercel.app/
 * Tailwind CSS – Utility-first CSS framework
 
 * Vite – Build tool
+
+# 🧩 Gameplay
+
+* Click a card to flip it.
+
+* Flip another card to find a match.
+
+* If they match, they stay flipped.
+
+* Try to match all pairs in as few moves as possible!
